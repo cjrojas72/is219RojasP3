@@ -20,14 +20,12 @@
 	
 </head>
 
-  <body ng-app="IS219Gallery">
-  
-  	<h1><strong>The End</strong></h1>
+  <body ng-app="IS219Gallery" ng-controller="HomeController">
 	  
-    <div class="header" ng-controller="HomeController">
+    <div class="header">
 	    
       <div class="container">
-        <h1 id="app_title">%title%</h1>
+        <h1 id="app_title">{{ title }}</h1>
       </div>
       
     </div>
@@ -60,9 +58,9 @@
 
     <div class="footer">
       <div class="container">
-		<a id="github" class="btn btn-lg btn-warning">
-			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> %owner% %github%
-  		</a>
+		<a id="github" class="btn btn-lg btn-warning" href={{github}}>
+			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i>{{ owner }}
+			</a>
       </div>
     </div>
 

@@ -98,12 +98,9 @@ app.controller('HomeController', ['$scope', function($scope) {
 	
 	/* ADD VARIABLES FOR STEP 3 HERE */
 	
-	$scope.footerInfo = [
-	{
-			title: 'IMBD + Christian\'s Top 8 Movies',
-			owner: 'Christian Rojas',
-			gihub: 'https://github.com/cjrojas72/is219RojasP3'
-	}];
+			$scope.title = 'IMBD + Christian\'s Top 8 Movies';
+			$scope.owner = 'Christian Rojas';
+			$scope.github = 'https://github.com/cjrojas72/is219RojasP3';
 	
 	
 	
