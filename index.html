@@ -35,20 +35,19 @@
       <div class="container">
 
         <div class="col-md-6"> 
-            <div class="thumbnail">
+            <div class="thumbnail" ng-repeat="movie in movies">
 
-					<img class="poster" ng-src= "{{movies[0].posters[0]}}" />
-					<div class="imageInfo">{{ movies[0].posterindex }}</div>
-					
-					<p class="title"> {{ movies[0].title }} ({{ movies[0].country }})</p> 
-					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movies[0].iscore}} </p>
-					<p class="runtime">Runtime: {{movies[0].runtime}}</p> 
-					<p class="released">Released: {{movies[0].released}} | Rated: {{movies[0].rating}}</p>
-					<p class="websites">Websites: <a>{{movies[0].imdb}}</a> | <a>{{movies[0].website}}</a></p>
+					<img class="poster" ng-src= "{{movies[$index].posters[0]}}" />
+					<div class="imageInfo">{{ movies[$index].posterindex }}</div>	
+					<p class="title"> {{ movies[$index].title }} ({{ movies[$index].country }})</p> 
+					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movies[$index].iscore}} </p>
+					<p class="runtime">Runtime: {{movies[$index].runtime}}</p> 
+					<p class="released">Released: {{movies[$index].released}} | Rated: {{movies[$index].rating}}</p>
+					<p class="websites">Websites: <a>{{movies[$index].imdb}}</a> | <a>{{movies[$index].website}}</a></p>
 					
 		            <div class="social">
-		              <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ movies[0].likes }}</p>
-		              <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{ movies[0].dislikes }}</p>
+		              <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ movies[$index].likes }}</p>
+		              <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{ movies[$index].dislikes }}</p>
 		            </div>
             </div> 
         </div>
