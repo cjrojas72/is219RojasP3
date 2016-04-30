@@ -88,6 +88,48 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
+	},
+	{
+	  title:	'Inception', 
+      iscore:	8.8,
+      rating:	'PG-13',
+      runtime:	148,
+      released:	new Date('2010', '7', '16'),
+      country:	'USA',
+      posters:	['img/InceptionImg1.jpg','img/Inceptionimg2.jpg'],
+      imdb:		'http://www.imdb.com/title/tt1375666',
+      website:	'http://www.warnerbros.com/inception',
+      likes:	1400,
+      dislikes:	150,
+      posterindex: 0
+	},
+	{
+	  title:	'Spy', 
+      iscore:	7.1,
+      rating:	'R',
+      runtime:	119,
+      released:	new Date('2015', '6', '5'),
+      country:	'USA',
+      posters:	['img/SpyImg1.jpg','img/SpyImg2.jpg'],
+      imdb:		'http://www.imdb.com/title/tt3079380',
+      website:	'https://www.facebook.com/SpyMovie/',
+      likes:	1321,
+      dislikes:	367,
+      posterindex: 0
+	},
+	{
+	  title:	'Captain America: The Winter Soldier', 
+      iscore:	7.8,
+      rating:	'PG-13',
+      runtime:	136,
+      released:	new Date('2014', '4', '4'),
+      country:	'USA',
+      posters:	['img/WinterSoldierImg1.jpg','img/WinterSoldierImg2.jpg'],
+      imdb:		'http://www.imdb.com/title/tt1843866',
+      website:	'http://screenrant.com/tag/captain-america-2/',
+      likes:	1890,
+      dislikes:	230,
+      posterindex: 0
 	}
 	
 	
@@ -135,23 +177,12 @@ app.controller('HomeController', ['$scope', function($scope) {
 			
 	};
 	
-	function timeText(minutes)
+	$scope.timeText=function(minutes)
 	{	
 			hour= Math.floor(minutes/60);
 			min= minutes%60;
 			
 			return hour + "h" + " " + min + "m"
-	}
-	
-	console.log(timeText(155));
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	};
+		
 }]);
